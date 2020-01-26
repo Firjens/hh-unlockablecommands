@@ -10,6 +10,7 @@ import com.eu.habbo.plugin.events.emulator.EmulatorLoadedEvent;
 import com.eu.habbo.plugin.events.users.UserLoginEvent;
 import com.hackerman.plugin.commands.admin.givecommand;
 import com.hackerman.plugin.commands.admin.removecommand;
+import com.hackerman.plugin.commands.core.about;
 import com.hackerman.plugin.commands.cosmetic.eggify;
 import com.hackerman.plugin.commands.cosmetic.kiss;
 import com.hackerman.plugin.commands.cosmetic.poof;
@@ -28,7 +29,7 @@ public class main extends HabboPlugin implements EventListener {
     public static String pluginPrefix = "UNLOCKABLE CMDS";
     public static String pluginName = "Unlockable Commands";
     public static String pluginAuthor = "Hackerman";
-    public static String version = "1.0.0";
+    public static String version = "1.0.1";
     public static int productId = 8;
 
     public void onEnable () throws Exception {
@@ -54,6 +55,7 @@ public class main extends HabboPlugin implements EventListener {
             // Load RCON
             Emulator.getRconServer().addRCONMessage("addcommand", addCommand.class);
             // Load Commands
+            CommandHandler.addCommand(new about());
             CommandHandler.addCommand(new givecommand());
             CommandHandler.addCommand(new removecommand());
             CommandHandler.addCommand(new eggify());
