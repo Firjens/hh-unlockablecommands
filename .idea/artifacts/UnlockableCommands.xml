@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="UnlockableCommands">
+    <output-path>$PROJECT_DIR$/out/artifacts/webkit</output-path>
+    <root id="archive" name="UnlockableCommands.jar">
+      <element id="module-output" name="about" />
+    </root>
+  </artifact>
+</component>
